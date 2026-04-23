@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ======= Apple Glass Button Base ======= */
+.btn-glass {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #f0f9ff;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-size: 0.875rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.btn-glass:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.25);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+    transform: translateY(-1px);
+}
+
+/* ======= Primary Gradient Button ======= */
+.btn-primary-glass {
+    background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+    border: none;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 20px rgba(56,189,248,0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+    letter-spacing: 0.01em;
+}
+.btn-primary-glass:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+    box-shadow: 0 6px 30px rgba(56,189,248,0.5), inset 0 1px 0 rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+}
+
+/* ======= Accent/Accent-Outline Button ======= */
+.btn-accent {
+    background: rgba(56,189,248,0.12);
+    border: 1px solid rgba(56,189,248,0.35);
+    color: #38bdf8;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-size: 0.875rem;
+}
+.btn-accent:hover {
+    background: rgba(56,189,248,0.22);
+    box-shadow: 0 0 24px rgba(56,189,248,0.3);
+    transform: translateY(-1px);
+}
+
+/* ======= Gradient Heading Text ======= */
+.gradient-text {
+    background: linear-gradient(140deg, #f0f9ff 15%, #7dd3fc 50%, #38bdf8 85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: shimmer 5s linear infinite;
+}
+
+/* ======= Section label (e.g. "What We Offer") ======= */
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56,189,248,0.1);
+    border: 1px solid rgba(56,189,248,0.25);
+    color: #38bdf8;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+@keyframes shimmer {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* ======= Page animations ======= */
+@keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes bgFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50%       { transform: translateY(-20px) scale(1.04); }
+}
+@keyframes rotateGlow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* ======= Responsive nav ======= */
+@media (max-width: 991px) {
+    .desktop-nav { display: none !important; }
+}
+@media (min-width: 992px) {
+    .mobile-menu-btn { display: none !important; }
+}
